@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { NavLink } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+      <NavLink to="/login">Login</NavLink>
       <div className="flex flex-col items-center m-5 gap-4 p-5 border-2 border-green-400">
         <button
           className="border-2 border-purple-400 p-5 w-32 rounded-xl"
@@ -93,6 +95,8 @@ function App() {
         </div>
       </div>
     </>
+
+    
   );
 }
 
