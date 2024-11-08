@@ -1,0 +1,38 @@
+[
+  {
+    "trainName": "Kishoregonj Express",
+    "stations": [
+      { "name": "Kishoregonj", "distance": 0, "allocatedSeats": 60 },
+      { "name": "Bajitpur", "distance": 10, "allocatedSeats": 60 },
+      { "name": "Kuliarchor", "distance": 20, "allocatedSeats": 60 },
+      { "name": "Bhairab Bazaar", "distance": 30, "allocatedSeats": 60 },
+      { "name": "Methikanda", "distance": 40, "allocatedSeats": 60 },
+      { "name": "Airport", "distance": 50, "allocatedSeats": 60 },
+      { "name": "Dhaka", "distance": 60, "allocatedSeats": 60 }
+    ]
+  },
+  {
+    "trainName": "Chattogram Express",
+    "stations": [
+      { "name": "Chattogram", "distance": 0, "allocatedSeats": 60 },
+      { "name": "Akaura", "distance": 10, "allocatedSeats": 60 },
+      { "name": "Brammonbaria", "distance": 20, "allocatedSeats": 60 },
+      { "name": "Methikanda", "distance": 40, "allocatedSeats": 60 },
+      { "name": "Narshingdi", "distance": 40, "allocatedSeats": 60 },
+      { "name": "Airport", "distance": 50, "allocatedSeats": 60 },
+      { "name": "Dhaka", "distance": 60, "allocatedSeats": 60 }
+    ]
+  },
+  {
+    "trainName": "Sylhet Express",
+    "stations": [
+      { "name": "Sylhet", "distance": 0, "allocatedSeats": 60 },
+      { "name": "Akaura", "distance": 10, "allocatedSeats": 60 },
+      { "name": "Brammonbaria", "distance": 20, "allocatedSeats": 60 },
+      { "name": "Bhairab Bazaar", "distance": 25, "allocatedSeats": 60 },
+      { "name": "Narshingdi", "distance": 40, "allocatedSeats": 60 },
+      { "name": "Airport", "distance": 50, "allocatedSeats": 60 },
+      { "name": "Dhaka", "distance": 60, "allocatedSeats": 60 }
+    ]
+  }
+]

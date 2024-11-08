@@ -29,7 +29,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/buyTicket",
-        element: <BuyTicket></BuyTicket>
+        element: <BuyTicket></BuyTicket>,
+        loader: () => fetch("data.json")
       }
     ],
   },
