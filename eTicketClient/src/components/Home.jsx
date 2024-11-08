@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
-import trainImage from "../assets/train.jpg";
+import { useState, useEffect } from "react";
+import trainImage1 from "../assets/train.jpg";
 import trainImage2 from "../assets/train2.png";
 import trainImage3 from "../assets/train3.png";
+import trainImage4 from "../assets/train4.png"
+import trainImage5 from "../assets/train5.png"
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -9,13 +11,11 @@ const Home = () => {
 
   // Use an array of images for easy access
   const slides = [
-    { id: 1, src: trainImage },
+    { id: 1, src: trainImage1 },
     { id: 2, src: trainImage2 },
     { id: 3, src: trainImage3 },
-    {
-      id: 4,
-      src: "https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp",
-    },
+    { id: 4, src: trainImage4 },
+    { id: 5, src: trainImage5 },
   ];
 
   // Automatically transition slides every 4 seconds
@@ -51,6 +51,7 @@ const Home = () => {
           {/* Carousel */}
           <div className="lg:carousel hidden z-[-10] w-full">
             {slides.map((slide, index) => (
+              // Carousel boiler plates
               <div
                 key={slide.id}
                 id={`slide${slide.id}`}
@@ -90,12 +91,13 @@ const Home = () => {
                   </a>
                 </div>
               </div>
+              // End of carousel
             ))}
           </div>
 
           {/* Inside Content */}
           <div className="hero-overlay bg-opacity-60"></div>
-          <div className="lg:flex-row flex flex-col text-neutral-content text-center border-2 border-green-500 p-5">
+          <div className="lg:flex-row flex flex-col text-neutral-content text-center border-green-500 p-5">
             {/* Intro texts ! */}
             <div className="flex flex-col items-center justify-center">
               <h1 className="mb-5 text-xl lg:text-4xl font-bold animate__animated animate__fadeInLeft animate__delay-1s">
@@ -105,9 +107,9 @@ const Home = () => {
                 This is a demo website for e-ticket service of Bangladesh
                 Railway.
               </p>
-              <button className="animate__animated animate__fadeInUpBig animate__delay-3s p-2 lg:p-5 bg-transparent border-2 border-white hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
+              <NavLink to="/buyTicket" className="animate__animated animate__fadeInUpBig animate__delay-3s p-2 lg:p-5 bg-transparent border-2 border-white hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">
                 Buy Ticket
-              </button>
+              </NavLink>
             </div>
 
             {/* form */}
