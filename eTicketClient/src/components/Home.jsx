@@ -4,6 +4,7 @@ import trainImage2 from "../assets/train2.png";
 import trainImage3 from "../assets/train3.png";
 import trainImage4 from "../assets/train4.png"
 import trainImage5 from "../assets/train5.png"
+import trainImage6 from "../assets/train6.png"
 import { NavLink } from "react-router-dom";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
     { id: 3, src: trainImage3 },
     { id: 4, src: trainImage4 },
     { id: 5, src: trainImage5 },
+    { id: 6, src: trainImage6 },
   ];
 
   // Automatically transition slides every 4 seconds
