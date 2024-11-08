@@ -5,10 +5,11 @@ import trainImage3 from "../assets/train3.png";
 import trainImage4 from "../assets/train4.png"
 import trainImage5 from "../assets/train5.png"
 import trainImage6 from "../assets/train6.png"
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
+  const navigate = useNavigate();
 
   // Use an array of images for easy access
   const slides = [
@@ -44,6 +45,8 @@ const Home = () => {
       "\nDate of Journey : ",
       dateOfJourney
     );
+    // Navigating to BuyTicket Page
+    navigate(`/buyTicket?fromCity=${fromCity}&toCity=${toCity}&doj=${dateOfJourney}`);
   };
 
   return (

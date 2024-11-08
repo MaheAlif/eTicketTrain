@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useSearchParams } from "react-router-dom";
 
 const BuyTicket = () => {
   const data = useLoaderData();
   console.log("Train data : \n", data);
+
+  //   Filterring out the data from params passed from Home page
+  const [searchParams] = useSearchParams();
+  const fromCity1 = searchParams.get("fromCity");
+  const toCity1 = searchParams.get("toCity");
+  const dateOfJourney1 = searchParams.get("doj");
 
   // State to store filtered trains based on search
   const [filteredTrains, setFilteredTrains] = useState([]);
@@ -15,13 +21,16 @@ const BuyTicket = () => {
     const fromCity = form.fromCity.value;
     const toCity = form.toCity.value;
 
+    const fromCity2 =  fromCity.toLowerCase() || fromCity1.toLowerCase() 
+    const toCity2 =  toCity.toLowerCase() || toCity1.toLowerCase() 
+
     // Filter trains based on fromCity and toCity
     const matchingTrains = data.filter((train) => {
       const fromIndex = train.stations.findIndex(
-        (station) => station.name.toLowerCase() === fromCity.toLowerCase()
+        (station) => station.name.toLowerCase() === fromCity2.toLowerCase()
       );
       const toIndex = train.stations.findIndex(
-        (station) => station.name.toLowerCase() === toCity.toLowerCase()
+        (station) => station.name.toLowerCase() === toCity2.toLowerCase()
       );
 
       // Ensure both cities exist in the train's station list in the correct order
@@ -89,7 +98,9 @@ const BuyTicket = () => {
 
         {/* Show train */}
         <div className="p-5 border-2 border-purple-500 ">
-          <h2 className="text-xl font-semibold text-black">Available Trains:</h2>
+          <h2 className="text-xl font-semibold text-black">
+            Available Trains:
+          </h2>
           <div className="mt-4">
             {filteredTrains.length > 0 ? (
               filteredTrains.map((train, index) => (
