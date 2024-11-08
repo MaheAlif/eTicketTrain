@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Login = () => {
   return (
     <div className="animate__animated animate__backInDown">
-      <div className="hero  bg-base-200 min-h-screen">
+      <div className="hero  bg-slate-300 min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <svg

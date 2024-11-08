@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-slate-100">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,36 +28,36 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 gap-2 shadow"
             >
               <li>
-                <a className="p-2 border-2 border-green-400">Train schedule</a>
+                <a className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">Train schedule</a>
               </li>
               <li>
-                <a className="p-2 border-2 border-green-400">Information</a>
+                <a className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">Information</a>
               </li>
               <li>
-                <a className="p-2 border-2 border-green-400">Train stations</a>
+                <a className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">Train stations</a>
               </li>
             </ul>
           </div>
           <NavLink to="" className="btn btn-ghost text-xl lg:text-3xl">eTicket</NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="flex gap-2 px-1">
             <li>
-              <a className="p-2 border-2 border-green-400">Train schedule</a>
+              <a className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">Train schedule</a>
             </li>
             <li>
-              <a className="p-2 border-2 border-green-400">Information</a>
+              <a className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">Information</a>
             </li>
             <li>
-              <a className="p-2 border-2 border-green-400">Train stations</a>
+              <a className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl">Train stations</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end gap-2">
-          <NavLink className="p-2 border-2 border-green-400 " to="/login">
+          <NavLink className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl " to="/login">
             Login{" "}
           </NavLink>
-          <NavLink className="p-2 border-2 border-green-400 " to="/register">
+          <NavLink className="p-2 lg:px-5 lg:py-2 bg-transparent border-2 border-green-500 hover:bg-green-700 hover:text-white hover:border-purple-400 hover:border-4 hover:text-xl " to="/register">
             Register{" "}
           </NavLink>
         </div>
